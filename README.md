@@ -50,6 +50,12 @@ You'll also need to [obtain a Twilio phone number](https://www.twilio.com/consol
 
 Finally, set an environment variable called `RECIPIENT_SMS` to specify the recipient's phone number (including the plus sign at the beginning).
 
+### Twitter
+
+For tweeting capabilities, create a Twitter Account. Then while logged in to Twitter, visit the [Twitter Application Management Console](https://developer.twitter.com/en/apps) and click "Create New App" to create a new Twitter Application. You might have to first sign up for a Twitter developer account, and click the link in a confirmation email.
+
+After creating a new application, click on the "Keys and Access Tokens" tab, and note the application's "Consumer Key" and "Consumer Secret". Scroll down and generate a new Access Token and note its "Access Token" and "Access Token Secret" values. Update the contents of the ".env" file to store these four values in the following environment variables, respectively: `TWITTER_API_KEY`, `TWITTER_API_SECRET`,  `TWITTER_ACCESS_TOKEN`, `TWITTER_ACCESS_TOKEN_SECRET`.
+
 ## Usage
 
 ### Send Email
@@ -66,6 +72,14 @@ Send an SMS to the phone number specified:
 
 ```sh
 python app/send_sms.py
+```
+
+### Send a Tweet
+
+Post a message to the Twitter platform:
+
+```sh
+python app/send_tweet.py
 ```
 
 ## [License](/LICENSE.md)
