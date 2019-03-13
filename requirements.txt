@@ -1,3 +1,4 @@
 python-dotenv
 sendgrid
 twilio
+tweepy
