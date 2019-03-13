@@ -21,9 +21,12 @@ RECIPIENT_SMS  = os.environ.get("RECIPIENT_SMS", "OOPS, please specify env var c
 
 client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
 
-# ISSUE REQUEST (SEND SMS)
+# COMPILE REQUEST PARAMETERS (PREPARE THE MESSAGE)
 
 content = "Hello, this is a message from your personal notification service. TODO: customize me!"
+
+# ISSUE REQUEST (SEND SMS)
+
 message = client.messages.create(to=RECIPIENT_SMS, from_=SENDER_SMS, body=content)
 
 # PARSE RESPONSE
