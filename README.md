@@ -13,7 +13,7 @@ Contains Python scripts to send notifications through a variety of media, like e
 
 Fork the repository from [GitHub source](https://github.com/prof-rossetti/notification-service-py).
 
-Then clone your fork to download it onto your local computer and automatically associate it with a remote address named "origin":
+Then use GitHub Desktop or the command-line to "clone" or download your fork onto your local computer:
 
 ```sh
 git clone https://github.com/YOUR_USERNAME/notification-service-py.git # this is the HTTP address, but you could alternatively use the SSH address
