@@ -1,4 +1,4 @@
 python-dotenv
-sendgrid
+sendgrid==5.6.0
 twilio
 tweepy
