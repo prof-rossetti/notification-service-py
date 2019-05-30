@@ -33,7 +33,7 @@ Create and activate an Anaconda virtual environment. From within the virtual env
 pip install -r requirements.txt
 ```
 
-Copy the ".env.example" file to a new file called ".env", and update the environment variables inside as necessary (see below).
+Copy the ".env.example" file to a new file called ".env" (in your local repo, NOT your remote repo), and update the environment variables inside as necessary (see below).
 
 ### Email
 
