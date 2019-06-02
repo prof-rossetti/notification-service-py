@@ -1,0 +1,13 @@
+
+
+<h3>Hello this is your receipt</h3>
+
+<p>Date: {{human_friendly_timestamp}}</p>
+
+<p>Total: {{total_price_usd}}</p>
+
+<ul>
+{{#each products}}
+	<li>You ordered: {{this.name}}</li>
+{{/each}}
+</ul>

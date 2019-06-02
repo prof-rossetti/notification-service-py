@@ -13,30 +13,26 @@ SENDGRID_TEMPLATE_ID = os.environ.get("SENDGRID_TEMPLATE_ID", "OOPS, please set 
 MY_ADDRESS = os.environ.get("MY_EMAIL_ADDRESS", "OOPS, please set env var called 'MY_EMAIL_ADDRESS'")
 SUBJ = "Your Receipt from the Green Grocery Store"
 
-selected_products = [
-    {"id":1, "name": "Product 1"},
-    {"id":2, "name": "Product 2"},
-    {"id":3, "name": "Product 3"},
-    {"id":2, "name": "Product 2"},
-    {"id":1, "name": "Product 1"},
-]
-
 client = SendGridAPIClient(SENDGRID_API_KEY)
 print("CLIENT:", type(client))
 
 message = Mail(from_email=MY_ADDRESS, to_emails=MY_ADDRESS, subject=SUBJ)
 print("MESSAGE:", type(message))
 
-message.dynamic_template_data = {
-    "subject": "Other Subject",
-    "body": "Hello Body",
-    "products": selected_products,
-    "my_message": "This is a test!"
-}
 message.template_id = SENDGRID_TEMPLATE_ID
 
+message.dynamic_template_data = {
+    "total_price_usd": "$14.95",
+    "human_friendly_timestamp": "June 1st, 2019 10:00 AM",
+    "products":[
+        {"id":1, "name": "Product 1"},
+        {"id":2, "name": "Product 2"},
+        {"id":3, "name": "Product 3"},
+        {"id":2, "name": "Product 2"},
+        {"id":1, "name": "Product 1"}
+    ]
+}
 
-#breakpoint()
 try:
     response = client.send(message)
     print("RESPONSE:", type(response))
