@@ -21,3 +21,7 @@ python app/send_receipt.py
   + https://github.com/sendgrid/sendgrid-python
   + https://github.com/sendgrid/sendgrid-python/releases/tag/v6.0.0
   + https://github.com/sendgrid/sendgrid-python/blob/master/USAGE.md#templates
+
+## Images
+
+  + https://www.shareicon.net/goods-grocery-food-groceries-shopping-store-supermarket-759867
