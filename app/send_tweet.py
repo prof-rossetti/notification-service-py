@@ -25,7 +25,31 @@ auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 
 client = tweepy.API(auth)
 
+
+
 # ISSUE REQUEST(S)
+
+
+# adapted from:
+#  + https://stackoverflow.com/questions/27243819/how-to-get-tweets-of-a-particular-hashtag-in-a-location-in-a-tweepy
+#  + https://stackoverflow.com/questions/44948628/how-to-take-all-tweets-in-a-hashtag-with-tweepy
+#  + https://stackoverflow.com/a/25895602/670433
+
+matching_tweets = tweepy.Cursor(client.search, q="cricket").items(25)
+
+for t in matching_tweets:
+    print(t.text) #> <class 'tweepy.models.Status'>
+    print(t.created_at) #> datetime.datetime(2019, 6, 25, 5, 17, 33)
+    #tags = t.entities["hashtags"]
+    #print(tags)
+    #print("--------------------------")
+    breakpoint()
+
+#breakpoint()
+
+
+exit()
+
 
 user = client.me() # get information about the currently authenticated user
 
