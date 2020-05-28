@@ -66,6 +66,12 @@ Send email to the address specified:
 python app/send_email.py
 ```
 
+Send email template with image to the address specified:
+
+```sh
+python app/send_receipt_template.py
+```
+
 ### Send SMS
 
 Send an SMS to the phone number specified:
