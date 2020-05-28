@@ -42,3 +42,13 @@ try:
 
 except Exception as e:
     print("OOPS", e)
+
+
+
+
+
+
+
+#templates = client.client.templates.get()
+#type(templates) #> <class 'python_http_client.client.Response'>
+#print("TEMPLATES", templates.to_dict) #> {'templates': []}
